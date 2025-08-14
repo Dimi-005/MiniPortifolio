@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
@@ -7,67 +7,70 @@
 }
 
 
-body{
-    color:rgb(0, 0, 0);
+body {
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     background-color: #d38450;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-header{
-    background-color:antiquewhite;
+header {
+    background-color: antiquewhite;
     position: sticky;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 60px;
-    padding: 0 10px;
+    padding: 30px 10px;
     box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    flex: 1;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 30px;
 }
 
-a{
+a {
     color: rgb(0, 0, 0);
 }
 
 li:hover a {
-  color: #d38450;
+    color: #d38450;
 }
 
-#titulo{
+#titulo {
     text-align: center;
     padding-top: 2%;
 }
 
-main section{
-    flex-direction: row;
-    margin-top: 8%;
-    margin-left: 15%;
-    margin-right: 15%;
-    height: 300px;
+main section {
+    max-width: 800px;
+    margin: 50px auto;
     background-color: antiquewhite;
     border-radius: 10px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 30px;
 }
 
-main section p{
+main section p {
     display: flex;
     text-align: justify;
     padding-top: 4%;
@@ -79,15 +82,21 @@ main section p{
     gap: 30px;
 }
 
+.sobre {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
 
-.containerB{
+.containerB {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 
-.botao{
+.botao,
+.containerB a {
     color: #fff;
     padding: 10px;
     border: none;
@@ -97,34 +106,37 @@ main section p{
     cursor: pointer;
 }
 
-.botao:hover{
+.botao:hover {
     background-color: #a35f31;
 }
 
+.sobre h2 {
+    text-align: center;
+}
 
-
-h2{
+h2 {
     padding-top: 2%;
     padding-left: 4%;
     padding-right: 4%;
 }
 
-.perfil{
+.perfil {
     border-radius: 40px;
     width: 190px;
     height: 190px;
-
+    object-fit: cover;
+    margin: auto;
 }
 
-form{
-    padding-top: 4%;
+form {
+    padding-top: 2%;
     padding-left: 4%;
     padding-right: 4%;
     padding-bottom: 2%;
     text-align: center;
 }
 
-.listaHabi{
+.listaHabi {
     padding-top: 4%;
     padding-left: 4%;
     padding-right: 4%;
@@ -135,20 +147,34 @@ form{
 }
 
 footer img {
-  width: 30px;
+    width: 30px;
 }
 
-#direitos{
-    flex-direction: row;
-    text-align: center;
-    padding-top: 100px;
-}
-
-.container2{
+#direitos {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
+    /* os itens ficam um do lado do outro */
+    justify-content: space-between;
+    background-color: antiquewhite;
     align-items: center;
-    gap: 20px; 
+    padding: 20px 80px;
+}
+
+.container2 {
+    display: flex;
+    gap: 15px;
+}
+
+footer div a:hover {
+    transform: scale(1.1);
+
+}
+
+footer div a {
+    transition: .3s ease-in-out;
+}
+
+.h2contato {
+    padding-top: 0px;
+    padding-left: 4%;
+    padding-right: 4%;
 }
